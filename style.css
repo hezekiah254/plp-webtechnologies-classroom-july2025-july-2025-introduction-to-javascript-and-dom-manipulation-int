@@ -1,0 +1,97 @@
+/* Simple styling to make the page readable.
+   Keep it minimal — optional for the assignment. */
+
+:root{
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --accent: #2b6ef6;
+  --text: #17202a;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: var(--card);
+  padding: 16px 20px;
+  box-shadow: 0 1px 6px rgba(20,20,20,0.06);
+}
+
+h1 { margin: 0; font-size: 1.6rem; }
+.subtitle { margin: 4px 0 0; color: #4b5563; }
+
+main {
+  padding: 16px 20px;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 20px;
+}
+
+section {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(20,20,20,0.04);
+}
+
+#controls { grid-column: 1 / 3; display: block; }
+
+.control-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.control-row input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  flex: 1;
+}
+.control-row button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+.session-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.session-item {
+  padding: 10px;
+  border-bottom: 1px solid #eef2f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.session-item:last-child { border-bottom: none; }
+.result { margin-top: 8px; padding: 8px; background: #f3f6fb; border-radius: 6px; }
+
+.practice-block { margin-bottom: 12px; }
+
+footer {
+  padding: 8px 20px;
+  background: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Dark theme toggled by a class on body */
+body.dark {
+  --bg: #0b1220;
+  --card: #0f1724;
+  --accent: #7aa2ff;
+  --text: #e6eef8;
+}
